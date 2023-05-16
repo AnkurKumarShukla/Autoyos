@@ -70,18 +70,18 @@ try:
 
             if EYE_CLOSED_COUNTER >= MAXIMUM_FRAME_COUNT:
                 cv2.putText(image, "Drowsiness", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
-            # plt.plot(time_list, ear_list)
-            # plt.xlabel('Time')
-            # plt.ylabel('Eye Opening Probability')
-            # plt.show()
-        # plt.plot(time_list, ear_list)
-        # plt.xlabel('Time (s)')
-        # plt.ylabel('Eye Aspect Ratio')
-        # plt.show(block=False)
-        print(time_list)
-        print(ear_list)
+            plt.plot(time_list, ear_list)
+            plt.xlabel('Time')
+            plt.ylabel('Eye Opening Probability')
+            plt.show()
+     
         cv2.imshow("Frame", image)
         cv2.waitKey(1)
+    # plt.plot(time_list, ear_list)
+    # plt.xlabel('Time (s)')
+    # plt.ylabel('Eye Aspect Ratio')
+    # plt.show(block=False)
+        
 except Exception as e:
     print(e)
 
